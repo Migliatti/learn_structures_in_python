@@ -1,29 +1,58 @@
-## Learn Structures in Python
 
-This repository gathers small exercises and examples used while studying how to properly structure Python projects. The goal is to go beyond writing scripts and practice building maintainable layouts with clear entry points, modules, and documentation.
+# Learn Structures in Python
 
-### Objectives
-- Experiment with different directory layouts (packages, modules, and tests)
-- Practice separating responsibility across files
-- Add lightweight tooling such as virtual environments, formatters, and linters
-- Document learnings and decisions made while iterating on the structure
+Small learning exercises for practicing basic Python data structures and simple scripts. These exercises were created while following Alura's course material and demonstrate small, focused examples (functions, loops, string handling, basic validation, etc.).
 
-### Getting Started
-1. Clone the repository.
-2. Create and activate a virtual environment:
-   - Windows (PowerShell): `python -m venv .venv; .\.venv\Scripts\Activate.ps1`
-   - Git Bash: `python -m venv .venv && source .venv/Scripts/activate`
-3. Install tools or dependencies as you add them: `pip install -r requirements.txt` (create the file when needed).
+**Project**: A set of short Python examples grouped by exercise/topic.
 
-### Suggested Project Layout
+## Project Structure
+
+- `first_example/`: simple demonstration script (`sum.py`).
+- `first_excercise/`: first exercise with `main.py`.
+- `second_example/`: contains `main.py` and `counter.py` examples.
+- `second_excercise/`: contains `validate_cpf.py` (CPF validation exercise).
+- `third_excercise/`: contains `vogals_count.py` (vowel counting exercise).
+
+## Requirements
+
+- Python 3.8+ (3.10 or newer recommended)
+
+## How to run
+
+Each exercise is a small script you can run directly with Python. From the repository root run (using `bash` or a shell):
+
+```bash
+# Run a specific script file
+python first_example/sum.py
+python first_excercise/main.py
+python second_example/main.py
+python second_example/counter.py
+python second_excercise/validate_cpf.py
+python third_excercise/vogals_count.py
+
+# Or run as a module (if you prefer):
+python -m first_example.sum
 ```
-learn_structures_in_python/
-├─ src/              # reusable application code
-├─ tests/            # automated tests or exploratory notebooks
-├─ docs/             # notes taken while experimenting
-└─ README.md
-```
-Adapt this structure as the exercises evolve and capture the rationale in `docs/` so future you remembers the reasoning.
 
-### Contributing Notes
-This is primarily a personal learning space, but feel free to fork it or open issues with ideas on project organization tips, helpful links, or clarifying questions.
+Notes:
+- Some scripts may prompt for input in the terminal. If a script accepts command-line args or expects interactive input, follow the prompts.
+- If your system uses `python3` as the interpreter command, replace `python` with `python3`.
+
+## Tips
+
+- Use a virtual environment for experimentation: `python -m venv .venv && source .venv/bin/activate` (on Windows Git Bash use `source .venv/Scripts/activate`).
+- Add tests or a small harness if you want to run many examples in sequence.
+
+## Contributing
+
+Open a pull request with improvements, additional exercises, or clearer explanations. Keep changes focused and add short descriptions for each new exercise.
+
+## License
+
+This repository contains learning exercises; no specific license is included. Add a `LICENSE` file if you want to specify reuse terms.
+
+---
+Happy learning! If you want, I can also:
+
+- Add a `requirements.txt` or `pyproject.toml` if dependencies are needed.
+- Add a short example output for each script.
