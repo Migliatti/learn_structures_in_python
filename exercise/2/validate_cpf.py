@@ -1,9 +1,9 @@
-"""Validate CPF input.
+# Validate CPF input.
 
-This script checks that a CPF (Brazilian taxpayer ID) entered by the user
-contains exactly 11 numeric digits. If the input contains letters or any
-non-numeric characters, or does not have 11 digits, an error message is shown.
-"""
+# This script checks that a CPF (Brazilian taxpayer ID) entered by the user
+# contains exactly 11 numeric digits. If the input contains letters or any
+# non-numeric characters, or does not have 11 digits, an error message is shown.
+
 
 def validate_cpf(cpf):
     if not cpf.isdigit():
@@ -13,6 +13,5 @@ def validate_cpf(cpf):
     return "Valid CPF."
 
 
-if __name__ == "__main__":
-    cpf = input("Enter your CPF: ")
-    print(validate_cpf(cpf))
+cpf = input("Enter your CPF: ")
+print(validate_cpf(cpf))
