@@ -1,17 +1,18 @@
-# Carlos works in a court and needs to validate if the CPF entered by the client is in the correct format before proceeding with the service. The CPF must contain exactly 11 numeric digits. If the entry contains letters or any other character that is not a number, the program must display an error message.
+"""Validate CPF input.
 
-# Create a program that asks the user for a CPF number and verifies if it has 11 digits and contains only numbers.
+This script checks that a CPF (Brazilian taxpayer ID) entered by the user
+contains exactly 11 numeric digits. If the input contains letters or any
+non-numeric characters, or does not have 11 digits, an error message is shown.
+"""
 
 def validate_cpf(cpf):
-    print(cpf)
+    if not cpf.isdigit():
+        return "Error: CPF must contain only numbers."
+    if len(cpf) != 11:
+        return "Error: CPF must have exactly 11 digits."
+    return "Valid CPF."
 
-try:
-    cpf = input("Enter the CPF number (xxx.xxx.xxx-xx): ")
-    if validate_cpf(cpf):
-        print("The CPF is valid")
-    else:
-        print("The CPF is invalid")
-except ValueError:
-    print("Error: The CPF must contain only numbers.")
-except Exception as e:
-    print(f"Unexpected error: {e}")
+
+if __name__ == "__main__":
+    cpf = input("Enter your CPF: ")
+    print(validate_cpf(cpf))
