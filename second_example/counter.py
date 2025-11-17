@@ -1,4 +1,17 @@
+def clean_text(text):
+    text = text.lower()
+    characters = ",.!|?;:\"'(){}[]"
+    for character in characters:
+        text = text.replace(character, "")
+    return text
+
+
 def count_words(phrase):
+    phrase = clean_text(phrase)
+    if not phrase.strip():
+        return {}
     words = phrase.split()
-    print(words)
-    return len(words)
+    count = {}
+    for word in words:
+        count[word] = count.get(word,0) + 1
+    return count
