@@ -11,7 +11,7 @@ def find_large_words(text):
     large_words = [word for word in words if len(word) > 10]
     
     if large_words:
-        print(f"Large words quantity: {len(large_words)}")
+        print(f"Large word finds: {', '.join(large_words)}")
     else:
         print("No large words found.")
 
